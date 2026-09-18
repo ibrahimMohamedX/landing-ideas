@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Archai — Admin Dashboard</title>
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <!-- ================= LOGIN ================= -->
+
+    <div id="loginPage" class="admin-login-page">
+      <div class="admin-login-card">
+        <div class="admin-logo">
+          <img src="assets/images/logo.png" alt="Archai" />
+        </div>
+
+        <div class="admin-login-heading">
+          <span class="admin-label"> ADMIN AREA </span>
+
+          <h1>أهلاً بيك 👋</h1>
+
+          <p>سجل دخولك علشان تشوف بيانات العملاء.</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="admin-input-group">
+            <label for="adminEmail"> البريد الإلكتروني </label>
+
+            <input
+              type="email"
+              id="adminEmail"
+              placeholder="Admin@gmail.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="admin-input-group">
+            <label for="adminPassword"> كلمة المرور </label>
+
+            <input
+              type="password"
+              id="adminPassword"
+              placeholder="••••••••"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <div id="loginError" class="admin-error"></div>
+
+          <button type="submit" class="admin-primary-btn">
+            <span> دخول للـ Dashboard </span>
+
+            <span>←</span>
+          </button>
+        </form>
+
+        <a href="index.html" class="back-to-site"> ← العودة للموقع </a>
+      </div>
+    </div>
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <div id="dashboardPage" class="admin-dashboard-page" style="display: none">
+      <header class="admin-navbar">
+        <div class="admin-brand">
+          <img src="assets/images/logo.png" alt="Archai" />
+
+          <div>
+            <strong> Archai Solutions </strong>
+
+            <span> Admin Dashboard </span>
+          </div>
+        </div>
+
+        <div class="admin-actions">
+          <button id="themeToggle" class="admin-icon-btn">☾</button>
+
+          <button id="logoutBtn" class="admin-logout-btn">تسجيل خروج</button>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <!-- HEADER -->
+
+        <section class="admin-page-heading">
+          <div>
+            <span class="admin-label"> LEADS </span>
+
+            <h1>بيانات العملاء</h1>
+
+            <p>كل الأفكار والتصورات اللي وصلت من الـ Landing Page.</p>
+          </div>
+        </section>
+
+        <!-- STATS -->
+
+        <section class="admin-stats">
+          <div class="admin-stat-card">
+            <span class="stat-icon"> 👥 </span>
+
+            <div>
+              <span> إجمالي العملاء </span>
+
+              <strong id="totalLeads"> 0 </strong>
+            </div>
+          </div>
+
+          <div class="admin-stat-card">
+            <span class="stat-icon"> ✦ </span>
+
+            <div>
+              <span> آخر Lead </span>
+
+              <strong id="latestLead"> — </strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEARCH -->
+
+        <section class="admin-toolbar">
+          <div class="admin-search">
+            <span> ⌕ </span>
+
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="ابحث بالاسم، الرقم أو الإيميل..."
+            />
+          </div>
+
+          <button id="refreshBtn" class="admin-refresh-btn">↻ تحديث</button>
+        </section>
+
+        <!-- LEADS -->
+
+        <section>
+          <div id="leadsContainer" class="leads-container"></div>
+
+          <div id="emptyState" class="admin-empty" style="display: none">
+            <div>✦</div>
+
+            <h3>مفيش نتائج</h3>
+
+            <p>جرّب كلمة بحث مختلفة.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ================= MODAL ================= -->
+
+    <div id="leadModal" class="lead-modal">
+      <div class="lead-modal-overlay" id="modalOverlay"></div>
+
+      <div class="lead-modal-content">
+        <button id="closeModal" class="modal-close">×</button>
+
+        <div id="leadDetails"></div>
+      </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>
