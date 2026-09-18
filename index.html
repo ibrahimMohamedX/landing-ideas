@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>YOUR BRAND — عندك فكرة؟ مش محتاج تعرف تشرحها.</title>
+    <meta
+      name="description"
+      content="عندك فكرة App أو Website؟ احكيلنا فكرتك بطريقتك وإحنا نكمل الباقي."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-logo">YOUR<span>BRAND</span></div>
+      <div class="loader-line">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <header class="navbar" id="navbar">
+      <a href="#" class="brand">
+        <span class="brand-mark">Y</span>
+        <span class="brand-name">YOUR BRAND</span>
+      </a>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="تغيير الوضع">
+        <span class="theme-icon">☾</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero section">
+        <div class="hero-grid"></div>
+
+        <div class="hero-content reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            عندك فكرة في دماغك؟
+          </div>
+
+          <h1>
+            مش محتاج
+            <span class="gradient-text">تعرف تشرحها.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            قولها بطريقتك...
+            <strong>وإحنا نكمّل الباقي.</strong>
+          </p>
+
+          <p class="hero-description">
+            مش لازم تعرف الـ Features، ولا التكنولوجيا، ولا حتى تكون عارف تبدأ
+            منين. إحنا بس عايزين نفهم إنت عايز توصل لإيه.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn magnetic" data-scroll-to="brief">
+              <span>يلا نحكي الفكرة</span>
+              <span class="btn-arrow">←</span>
+            </button>
+
+            <button class="ghost-btn" data-scroll-to="why">
+              أنا مش عارف أشرحها أصلاً 😅
+            </button>
+          </div>
+
+          <div class="hero-note">
+            <span>✦</span>
+            أقل من دقيقة · من غير مصطلحات تقنية · من غير وجع دماغ
+          </div>
+        </div>
+
+        <!-- Creative visual -->
+        <div class="hero-visual reveal reveal-delay">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <div class="idea-card idea-main">
+            <div class="idea-header">
+              <span class="idea-dot"></span>
+              <span>فكرتي...</span>
+            </div>
+
+            <div class="idea-lines">
+              <div class="scribble long"></div>
+              <div class="scribble medium"></div>
+              <div class="scribble short"></div>
+            </div>
+
+            <span class="idea-smile">😅</span>
+          </div>
+
+          <div class="floating-card card-one">
+            <span>💡</span>
+            عايز حاجة شبه كذا
+          </div>
+
+          <div class="floating-card card-two">
+            <span>📱</span>
+            محتاج App
+          </div>
+
+          <div class="floating-card card-three">
+            <span>🤷</span>
+            بس مش عارف أبدأ
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">✦</div>
+            <div>
+              <small>من الفكرة...</small>
+              <strong>لحل واضح</strong>
+            </div>
+            <span class="solution-arrow">↙</span>
+          </div>
+
+          <div class="hero-glow"></div>
+        </div>
+      </section>
+
+      <!-- WHY -->
+      <section class="section why-section" id="why">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-label">خلينا نتفق على حاجة</span>
+
+            <h2>
+              مش لازم تكون
+              <span class="gradient-text">جاهز.</span>
+            </h2>
+
+            <p>
+              عادي جدًا تكون لسه عندك فكرة نصها كلام، ونصها "أنا حاسس إنها هتبقى
+              حلوة بس مش عارف أشرحها" 😂
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <div class="feature-number">01</div>
+              <div class="feature-icon">💭</div>
+              <h3>عندك فكرة بس؟</h3>
+              <p>تمام... ده كفاية جدًا كبداية.</p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay">
+              <div class="feature-number">02</div>
+              <div class="feature-icon">🤷</div>
+              <h3>مش عارف تتعمل إزاي؟</h3>
+              <p>ولا إحنا مستنيين منك تعرف.</p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay-2">
+              <div class="feature-number">03</div>
+              <div class="feature-icon">📝</div>
+              <h3>مش عايز تكتب Requirements؟</h3>
+              <p>ولا إحنا عايزينك تعمل شغلنا مكاننا.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section process-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-label">الموضوع أبسط مما شكله</span>
+            <h2>
+              كل اللي محتاجينه منك...
+              <span class="gradient-text">كام دقيقة.</span>
+            </h2>
+
+            <p>
+              جاوب على كام سؤال بسيط بالطريقة اللي تريحك. مفيش امتحان... متقلقش
+              😂
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-item reveal">
+              <span class="process-index">01</span>
+              <div>
+                <h3>احكيلنا الفكرة</h3>
+                <p>حتى لو في سطر واحد.</p>
+              </div>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-item reveal reveal-delay">
+              <span class="process-index">02</span>
+              <div>
+                <h3>نفهم نيتك</h3>
+                <p>مين هيستخدمها وإنت عايز تحل إيه؟</p>
+              </div>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-item reveal reveal-delay-2">
+              <span class="process-index">03</span>
+              <div>
+                <h3>سيب الباقي علينا</h3>
+                <p>إحنا نرتب الكلام ونفهم احتياجك.</p>
+              </div>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-item reveal reveal-delay-3">
+              <span class="process-index">04</span>
+              <div>
+                <h3>نرجعلك بتصور</h3>
+                <p>مش مجرد "السعر كام؟" وخلاص.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DON'T NEED -->
+      <section class="section dont-section">
+        <div class="container">
+          <div class="dont-layout">
+            <div class="dont-heading reveal">
+              <span class="section-label">وفر على نفسك</span>
+
+              <h2>
+                إيه اللي
+                <span class="gradient-text">مش محتاج</span>
+                تعمله؟
+              </h2>
+
+              <p>
+                إحنا مش طالبين منك تبقى مبرمج. إحنا محتاجين نفهم منك المشكلة
+                والهدف بس.
+              </p>
+            </div>
+
+            <div class="dont-list reveal reveal-delay">
+              <div class="dont-item">
+                <span>×</span>
+                <p>تكتب Requirements بالتفصيل</p>
+              </div>
+
+              <div class="dont-item">
+                <span>×</span>
+                <p>تتعلم مصطلحات برمجية</p>
+              </div>
+
+              <div class="dont-item">
+                <span>×</span>
+                <p>تعرف تختار التكنولوجيا</p>
+              </div>
+
+              <div class="dont-item">
+                <span>×</span>
+                <p>تشرح نفس الفكرة خمس مرات</p>
+              </div>
+
+              <div class="dont-item">
+                <span>×</span>
+                <p>تعرف الـ App يتعمل إزاي</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRIEF -->
+      <section class="section brief-section" id="brief">
+        <div class="container">
+          <div class="brief-wrapper reveal">
+            <div class="brief-top">
+              <div>
+                <span class="section-label">يلا نفهم الفكرة</span>
+                <h2>خد نفس... الموضوع بسيط 😌</h2>
+              </div>
+
+              <div class="brief-progress-text">
+                <span id="progressCurrent">1</span>
+                /
+                <span id="progressTotal">8</span>
+              </div>
+            </div>
+
+            <div class="progress-bar">
+              <span id="progressBar"></span>
+            </div>
+
+            <form id="ideaForm" novalidate>
+              <!-- STEP 1 -->
+              <div class="form-step active" data-step="1">
+                <div class="question">
+                  <span class="question-number">01</span>
+                  <h3>إيه اللي في دماغك؟</h3>
+                  <p>اختار أقرب حاجة لفكرتك.</p>
+                </div>
+
+                <div class="options-grid">
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="projectType"
+                    data-value="فكرة جديدة"
+                  >
+                    <span>💡</span>
+                    <strong>فكرة جديدة</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="projectType"
+                    data-value="عندي Business"
+                  >
+                    <span>🏢</span>
+                    <strong>عندي Business</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="projectType"
+                    data-value="عايز App"
+                  >
+                    <span>📱</span>
+                    <strong>عايز App</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="projectType"
+                    data-value="عايز Website"
+                  >
+                    <span>🌐</span>
+                    <strong>عايز Website</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="projectType"
+                    data-value="محتاج System"
+                  >
+                    <span>⚙️</span>
+                    <strong>محتاج System</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="projectType"
+                    data-value="عندي مشروع وعايز أطوره"
+                  >
+                    <span>🔧</span>
+                    <strong>عايز أطور مشروع موجود</strong>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="form-step" data-step="2">
+                <div class="question">
+                  <span class="question-number">02</span>
+                  <h3>الفكرة دي لمين؟</h3>
+                  <p>مين الناس اللي المفروض تستخدمها؟</p>
+                </div>
+
+                <div class="options-grid">
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="audience"
+                    data-value="أفراد"
+                  >
+                    <span>👤</span>
+                    <strong>أفراد</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="audience"
+                    data-value="شركات"
+                  >
+                    <span>🏢</span>
+                    <strong>شركات</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="audience"
+                    data-value="مطاعم وكافيهات"
+                  >
+                    <span>🍔</span>
+                    <strong>مطاعم وكافيهات</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="audience"
+                    data-value="متاجر"
+                  >
+                    <span>🛒</span>
+                    <strong>متاجر</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="audience"
+                    data-value="موظفين وفريق عمل"
+                  >
+                    <span>👨‍💼</span>
+                    <strong>موظفين / فريق عمل</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="audience"
+                    data-value="جمهور عام"
+                  >
+                    <span>🌍</span>
+                    <strong>جمهور عام</strong>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div class="form-step" data-step="3">
+                <div class="question">
+                  <span class="question-number">03</span>
+                  <h3>احكيلنا المشكلة بطريقتك.</h3>
+                  <p>مفيش إجابة صح وغلط. احكيها زي ما تحكيها لصاحبك 😂</p>
+                </div>
+
+                <textarea
+                  id="problem"
+                  class="large-input"
+                  placeholder="مثلاً: الطلبات عندي كلها على WhatsApp والدنيا بقت عك..."
+                ></textarea>
+
+                <div class="field-hint">
+                  <span>💡</span>
+                  مش محتاج تستخدم أي مصطلح تقني.
+                </div>
+
+                <div class="step-actions">
+                  <button type="button" class="back-btn">رجوع</button>
+                  <button type="button" class="next-btn">نكمل →</button>
+                </div>
+              </div>
+
+              <!-- STEP 4 -->
+              <div class="form-step" data-step="4">
+                <div class="question">
+                  <span class="question-number">04</span>
+                  <h3>لو المشروع نجح... إيه أكتر حاجة نفسك تحصل؟</h3>
+                  <p>اختار كل اللي ينطبق عليك.</p>
+                </div>
+
+                <div class="options-grid">
+                  <button
+                    type="button"
+                    class="option multi"
+                    data-field="goals"
+                    data-value="أوفر وقت"
+                  >
+                    <span>⏱</span>
+                    <strong>أوفر وقت</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option multi"
+                    data-field="goals"
+                    data-value="أجيب عملاء أكتر"
+                  >
+                    <span>📈</span>
+                    <strong>أجيب عملاء أكتر</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option multi"
+                    data-field="goals"
+                    data-value="أنظم الشغل"
+                  >
+                    <span>🧹</span>
+                    <strong>أنظم الشغل</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option multi"
+                    data-field="goals"
+                    data-value="أبيع أكتر"
+                  >
+                    <span>💰</span>
+                    <strong>أبيع أكتر</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option multi"
+                    data-field="goals"
+                    data-value="أقلل الأخطاء"
+                  >
+                    <span>🎯</span>
+                    <strong>أقلل الأخطاء</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option multi"
+                    data-field="goals"
+                    data-value="أطلق خدمة جديدة"
+                  >
+                    <span>🚀</span>
+                    <strong>أطلق خدمة جديدة</strong>
+                  </button>
+                </div>
+
+                <div class="step-actions">
+                  <button type="button" class="back-btn">رجوع</button>
+                  <button type="button" class="next-btn">نكمل →</button>
+                </div>
+              </div>
+
+              <!-- STEP 5 -->
+              <div class="form-step" data-step="5">
+                <div class="question">
+                  <span class="question-number">05</span>
+                  <h3>في حاجة شبه فكرتك؟</h3>
+                  <p>
+                    لو في App أو Website عجبك، ابعتهولنا. ولو مفيش، عادي جدًا.
+                  </p>
+                </div>
+
+                <input
+                  type="url"
+                  id="reference"
+                  class="text-input"
+                  placeholder="https://example.com"
+                />
+
+                <div class="optional-label">اختياري</div>
+
+                <div class="step-actions">
+                  <button type="button" class="back-btn">رجوع</button>
+                  <button type="button" class="next-btn">نكمل →</button>
+                </div>
+              </div>
+
+              <!-- STEP 6 -->
+              <div class="form-step" data-step="6">
+                <div class="question">
+                  <span class="question-number">06</span>
+                  <h3>إنت متخيلها إيه؟</h3>
+                  <p>ولو مش عارف... سيبها علينا عادي.</p>
+                </div>
+
+                <div class="options-grid">
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="platform"
+                    data-value="Mobile App"
+                  >
+                    <span>📱</span>
+                    <strong>Mobile App</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="platform"
+                    data-value="Website"
+                  >
+                    <span>🌐</span>
+                    <strong>Website</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="platform"
+                    data-value="Dashboard"
+                  >
+                    <span>🖥</span>
+                    <strong>Dashboard</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="platform"
+                    data-value="Desktop"
+                  >
+                    <span>💻</span>
+                    <strong>Desktop</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="platform"
+                    data-value="أكتر من حاجة"
+                  >
+                    <span>📱🌐</span>
+                    <strong>أكتر من حاجة</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="platform"
+                    data-value="اختاروا إنتوا"
+                  >
+                    <span>🤝</span>
+                    <strong>اختاروا إنتوا</strong>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 7 -->
+              <div class="form-step" data-step="7">
+                <div class="question">
+                  <span class="question-number">07</span>
+                  <h3>عندك Range تقريبي للميزانية؟</h3>
+                  <p>مش لازم تجاوب لو مش حابب.</p>
+                </div>
+
+                <div class="options-grid">
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="budget"
+                    data-value="لسه مش محدد"
+                  >
+                    <span>🤷</span>
+                    <strong>لسه مش محدد</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="budget"
+                    data-value="أقل من 20,000 جنيه"
+                  >
+                    <span>💵</span>
+                    <strong>أقل من 20K</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="budget"
+                    data-value="20,000 - 50,000 جنيه"
+                  >
+                    <span>💰</span>
+                    <strong>20K – 50K</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="budget"
+                    data-value="50,000 - 100,000 جنيه"
+                  >
+                    <span>💎</span>
+                    <strong>50K – 100K</strong>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="option"
+                    data-field="budget"
+                    data-value="أكتر من 100,000 جنيه"
+                  >
+                    <span>🚀</span>
+                    <strong>أكتر من 100K</strong>
+                  </button>
+                </div>
+
+                <div class="step-actions">
+                  <button type="button" class="back-btn">رجوع</button>
+                  <button type="button" class="next-btn">آخر خطوة →</button>
+                </div>
+              </div>
+
+              <!-- STEP 8 -->
+              <div class="form-step" data-step="8">
+                <div class="question">
+                  <span class="question-number">08</span>
+                  <h3>خلاص... عرفنا الأساسيات ❤️</h3>
+                  <p>سيب بيانات بسيطة عشان نعرف نرجعلك.</p>
+                </div>
+
+                <div class="contact-fields">
+                  <div class="field">
+                    <label for="name">اسمك</label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="مثلاً: إبراهيم محمد"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="phone">رقم الموبايل</label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      placeholder="01xxxxxxxxx"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">
+                      الإيميل
+                      <small>اختياري</small>
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="example@email.com"
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+
+                <div class="submit-note">
+                  🔒 بياناتك هتستخدم بس عشان نرجعلك بخصوص فكرتك.
+                </div>
+
+                <div class="step-actions">
+                  <button type="button" class="back-btn">رجوع</button>
+
+                  <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>ابعتلنا الفكرة 🚀</span>
+                    <span class="submit-loader"></span>
+                  </button>
+                </div>
+
+                <div class="form-error" id="formError"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUCCESS -->
+      <section class="success-section" id="successSection">
+        <div class="success-card">
+          <div class="success-icon">
+            <span>✓</span>
+          </div>
+
+          <span class="section-label">وصلت! 🎉</span>
+
+          <h2>
+            كده إحنا بقينا
+            <span class="gradient-text">فاهمينك أكتر.</span>
+          </h2>
+
+          <p>
+            فكرتك وصلت عندنا.
+            <br />
+            دلوقتي إحنا اللي علينا الشغل.
+          </p>
+
+          <button class="whatsapp-btn" id="whatsappBtn">
+            <span>عرفنا إنك بعتلنا على WhatsApp</span>
+            <span>↗</span>
+          </button>
+
+          <div class="success-small">
+            لو حابب تسرّع الموضوع، ابعتلنا إنك خلصت التصور.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <span class="brand-mark">Y</span>
+            <span class="brand-name">YOUR BRAND</span>
+          </a>
+
+          <p>بنحوّل الأفكار اللي في دماغك لحلول تقدر تستخدمها بجد.</p>
+        </div>
+
+        <div class="footer-copy">© <span id="year"></span> YOUR BRAND</div>
+      </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
