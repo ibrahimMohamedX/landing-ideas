@@ -5,12 +5,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="theme-color" content="#08090c" />
+
     <title>Archai — Admin Dashboard</title>
 
     <link rel="icon" type="image/png" href="assets/images/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -18,73 +19,115 @@
       rel="stylesheet"
     />
 
+    <!-- Main website design system -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Admin-specific styles -->
     <link rel="stylesheet" href="admin.css" />
   </head>
 
   <body>
-    <!-- ================= LOGIN ================= -->
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
 
     <div id="loginPage" class="admin-login-page">
-      <div class="admin-login-card">
-        <div class="admin-logo">
-          <img src="assets/images/logo.png" alt="Archai" />
+      <div class="admin-login-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <main class="admin-login-card">
+        <div class="admin-login-top">
+          <a href="index.html" class="admin-login-logo" aria-label="Archai">
+            <img src="assets/images/logo.png" alt="Archai" />
+          </a>
+
+          <span class="admin-secure-badge">
+            <span class="admin-status-dot"></span>
+            Secure Area
+          </span>
         </div>
 
         <div class="admin-login-heading">
           <span class="admin-label"> ADMIN AREA </span>
 
-          <h1>أهلاً بيك 👋</h1>
+          <h1>
+            أهلاً بيك
+            <span>👋</span>
+          </h1>
 
-          <p>سجل دخولك علشان تشوف بيانات العملاء.</p>
+          <p>
+            سجل دخولك علشان تتابع كل العملاء والـ
+            <span>Leads</span>
+            اللي وصلت من الموقع.
+          </p>
         </div>
 
-        <form id="loginForm">
+        <form id="loginForm" class="admin-login-form">
           <div class="admin-input-group">
             <label for="adminEmail"> البريد الإلكتروني </label>
 
-            <input
-              type="email"
-              id="adminEmail"
-              placeholder="Admin@gmail.com"
-              autocomplete="email"
-              required
-            />
+            <div class="admin-input-wrapper">
+              <span class="admin-input-icon"> @ </span>
+
+              <input
+                type="email"
+                id="adminEmail"
+                placeholder="admin@gmail.com"
+                autocomplete="email"
+                required
+              />
+            </div>
           </div>
 
           <div class="admin-input-group">
             <label for="adminPassword"> كلمة المرور </label>
 
-            <input
-              type="password"
-              id="adminPassword"
-              placeholder="••••••••"
-              autocomplete="current-password"
-              required
-            />
+            <div class="admin-input-wrapper">
+              <span class="admin-input-icon"> ••• </span>
+
+              <input
+                type="password"
+                id="adminPassword"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              />
+            </div>
           </div>
 
-          <div id="loginError" class="admin-error"></div>
+          <div id="loginError" class="admin-error" role="alert"></div>
 
           <button type="submit" class="admin-primary-btn">
             <span> دخول للـ Dashboard </span>
 
-            <span>←</span>
+            <span class="admin-btn-arrow"> ← </span>
           </button>
         </form>
 
-        <a href="index.html" class="back-to-site"> ← العودة للموقع </a>
-      </div>
+        <a href="index.html" class="back-to-site">
+          <span>←</span>
+          العودة للموقع
+        </a>
+      </main>
     </div>
 
-    <!-- ================= DASHBOARD ================= -->
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
 
     <div id="dashboardPage" class="admin-dashboard-page" style="display: none">
+      <!-- NAVBAR -->
+
       <header class="admin-navbar">
         <div class="admin-brand">
-          <img src="assets/images/logo.png" alt="Archai" />
+          <a href="index.html" class="admin-brand-logo" aria-label="Archai">
+            <img src="assets/images/logo.png" alt="Archai" />
+          </a>
 
-          <div>
+          <div class="admin-brand-copy">
             <strong> Archai Solutions </strong>
 
             <span> Admin Dashboard </span>
@@ -92,88 +135,144 @@
         </div>
 
         <div class="admin-actions">
-          <button id="themeToggle" class="admin-icon-btn">☾</button>
+          <button
+            id="themeToggle"
+            class="admin-icon-btn"
+            type="button"
+            aria-label="تغيير المظهر"
+            title="تغيير المظهر"
+          >
+            ☾
+          </button>
 
-          <button id="logoutBtn" class="admin-logout-btn">تسجيل خروج</button>
+          <button id="logoutBtn" class="admin-logout-btn" type="button">
+            <span> تسجيل خروج </span>
+
+            <span> ↪ </span>
+          </button>
         </div>
       </header>
 
+      <!-- MAIN -->
+
       <main class="admin-main">
-        <!-- HEADER -->
+        <!-- PAGE HEADER -->
 
         <section class="admin-page-heading">
-          <div>
+          <div class="admin-page-heading-content">
             <span class="admin-label"> LEADS </span>
 
             <h1>بيانات العملاء</h1>
 
             <p>كل الأفكار والتصورات اللي وصلت من الـ Landing Page.</p>
           </div>
+
+          <div class="admin-live-indicator">
+            <span class="admin-status-dot"></span>
+
+            <span> Live Data </span>
+          </div>
         </section>
 
         <!-- STATS -->
 
-        <section class="admin-stats">
-          <div class="admin-stat-card">
-            <span class="stat-icon"> 👥 </span>
+        <section class="admin-stats" aria-label="إحصائيات العملاء">
+          <article class="admin-stat-card">
+            <div class="stat-icon">👥</div>
 
-            <div>
+            <div class="stat-content">
               <span> إجمالي العملاء </span>
 
               <strong id="totalLeads"> 0 </strong>
             </div>
-          </div>
 
-          <div class="admin-stat-card">
-            <span class="stat-icon"> ✦ </span>
+            <div class="stat-accent"></div>
+          </article>
 
-            <div>
+          <article class="admin-stat-card">
+            <div class="stat-icon stat-icon-accent">✦</div>
+
+            <div class="stat-content">
               <span> آخر Lead </span>
 
-              <strong id="latestLead"> — </strong>
+              <strong id="latestLead" class="latest-lead-value"> — </strong>
             </div>
-          </div>
+
+            <div class="stat-accent"></div>
+          </article>
         </section>
 
-        <!-- SEARCH -->
+        <!-- TOOLBAR -->
 
         <section class="admin-toolbar">
           <div class="admin-search">
-            <span> ⌕ </span>
+            <span class="admin-search-icon"> ⌕ </span>
 
             <input
               type="search"
               id="searchInput"
               placeholder="ابحث بالاسم، الرقم أو الإيميل..."
+              autocomplete="off"
+              aria-label="البحث في العملاء"
             />
+
+            <span class="admin-search-hint"> Search </span>
           </div>
 
-          <button id="refreshBtn" class="admin-refresh-btn">↻ تحديث</button>
+          <button id="refreshBtn" class="admin-refresh-btn" type="button">
+            <span class="refresh-icon"> ↻ </span>
+
+            <span> تحديث </span>
+          </button>
         </section>
 
         <!-- LEADS -->
 
-        <section>
+        <section class="admin-leads-section">
+          <div class="admin-section-header">
+            <div>
+              <span class="admin-section-kicker"> CLIENT REQUESTS </span>
+
+              <h2>العملاء</h2>
+            </div>
+
+            <span class="admin-section-line"></span>
+          </div>
+
           <div id="leadsContainer" class="leads-container"></div>
 
           <div id="emptyState" class="admin-empty" style="display: none">
-            <div>✦</div>
+            <div class="empty-icon">⌕</div>
 
             <h3>مفيش نتائج</h3>
 
-            <p>جرّب كلمة بحث مختلفة.</p>
+            <p>جرّب كلمة بحث مختلفة أو امسح البحث.</p>
           </div>
         </section>
       </main>
     </div>
 
-    <!-- ================= MODAL ================= -->
+    <!-- =====================================================
+         LEAD MODAL
+    ====================================================== -->
 
-    <div id="leadModal" class="lead-modal">
+    <div id="leadModal" class="lead-modal" aria-hidden="true">
       <div class="lead-modal-overlay" id="modalOverlay"></div>
 
-      <div class="lead-modal-content">
-        <button id="closeModal" class="modal-close">×</button>
+      <div
+        class="lead-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-label="تفاصيل العميل"
+      >
+        <button
+          id="closeModal"
+          class="modal-close"
+          type="button"
+          aria-label="إغلاق"
+        >
+          ×
+        </button>
 
         <div id="leadDetails"></div>
       </div>

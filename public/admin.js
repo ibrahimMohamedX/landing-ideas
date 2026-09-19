@@ -568,15 +568,34 @@ function escapeHtml(value) {
 }
 const themeToggle = document.getElementById("themeToggle");
 
+function updateThemeIcon() {
+  const isLight = document.body.classList.contains("light-theme");
+
+  themeToggle.textContent = isLight ? "☾" : "☀";
+  themeToggle.setAttribute(
+    "aria-label",
+    isLight ? "تفعيل الوضع الداكن" : "تفعيل الوضع الفاتح",
+  );
+  themeToggle.setAttribute(
+    "title",
+    isLight ? "تفعيل الوضع الداكن" : "تفعيل الوضع الفاتح",
+  );
+}
+
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
 
   const isLight = document.body.classList.contains("light-theme");
 
   localStorage.setItem("admin-theme", isLight ? "light" : "dark");
+
+  updateThemeIcon();
 });
+
 const savedTheme = localStorage.getItem("admin-theme");
 
 if (savedTheme === "light") {
   document.body.classList.add("light-theme");
 }
+
+updateThemeIcon();
