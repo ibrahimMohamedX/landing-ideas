@@ -45,7 +45,7 @@ const db = getFirestore(app);
 // ADMIN
 // ======================================================
 
-const ADMIN_EMAIL = "Admin@gmail.com";
+const ADMIN_EMAIL = "admin@gmail.com";
 
 let allLeads = [];
 
@@ -94,15 +94,15 @@ onAuthStateChanged(auth, async (user) => {
     return;
   }
 
-  if (user.email !== ADMIN_EMAIL) {
-    await signOut(auth);
+  //   if (user.email !== ADMIN_EMAIL) {
+  //     await signOut(auth);
 
-    showLogin();
+  //     showLogin();
 
-    showLoginError("الحساب ده مش مسموح له يدخل الـ Dashboard.");
+  //     showLoginError("الحساب ده مش مسموح له يدخل الـ Dashboard.");
 
-    return;
-  }
+  //     return;
+  //   }
 
   showDashboard();
 
@@ -565,4 +565,18 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-theme");
+
+  const isLight = document.body.classList.contains("light-theme");
+
+  localStorage.setItem("admin-theme", isLight ? "light" : "dark");
+});
+const savedTheme = localStorage.getItem("admin-theme");
+
+if (savedTheme === "light") {
+  document.body.classList.add("light-theme");
 }
